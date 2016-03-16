@@ -102,7 +102,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libxml2 \
     camera.msm8226 \
-    Camera2
+    Camera2 \
+    mm-qcamera-app \
+    SnapdragonCamera
 
 # Compatibility
 PRODUCT_PACKAGES += \
