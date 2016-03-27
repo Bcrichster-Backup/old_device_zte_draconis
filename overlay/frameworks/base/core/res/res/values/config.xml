@@ -255,7 +255,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">64</integer>
+   
 
     <!-- Enable overlay for all location components. -->
     <bool name="config_enableNetworkLocationOverlay" translatable="false">false</bool>
