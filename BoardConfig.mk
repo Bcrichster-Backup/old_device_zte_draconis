@@ -103,6 +103,8 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x1e00000
 TARGET_KERNEL_SOURCE := kernel/zte/draconis
 TARGET_KERNEL_CONFIG := draconis_defconfig
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin/"
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
@@ -216,22 +218,5 @@ BOARD_HAS_QCOM_WLAN_SDK := true
 # inherit from the proprietary version
 -include vendor/zte/draconis/BoardConfigVendor.mk
 
-ifneq ($(BLISS_VERSION),)
-    # BlissPop Config Flags
-    BLISS_WIPE_CACHES := 0
-    TARGET_TC_ROM := 4.8-sm
-    TARGET_TC_KERNEL := 4.8-sm
-    BLISSIFY := true
-    BLISS_O3 := true
-    BLISS_STRICT := false
-    BLISS_GRAPHITE := true
-    BLISS_KRAIT := true
-    BLISS_PIPE := true
-    TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
-    TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
-
-    #SaberMod
-    -include vendor/bliss/config/sm.mk
-endif
 
 BLOCK_BASED_OTA=false
