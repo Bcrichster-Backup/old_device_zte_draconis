@@ -19,13 +19,13 @@
 
 LOCAL_PATH := device/zte/draconis
 
-ifeq ($(HOST_OS),linux)
-  ifeq ($(WITH_DEXPREOPT),)
-    WITH_DEXPREOPT := true
-    WITH_DEXPREOPT_BOOT_IMG_ONLY := false
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+#ifeq ($(HOST_OS),linux)
+#  ifeq ($(WITH_DEXPREOPT),)
+#    WITH_DEXPREOPT := true
+#    WITH_DEXPREOPT_BOOT_IMG_ONLY := false
+#  endif
+#endif
+#WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl , $(PRODUCT_COPY_FILES))
 
