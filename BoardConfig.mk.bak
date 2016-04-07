@@ -19,13 +19,13 @@
 
 LOCAL_PATH := device/zte/draconis
 
-#ifeq ($(HOST_OS),linux)
-#  ifeq ($(WITH_DEXPREOPT),)
-#    WITH_DEXPREOPT := true
-#    WITH_DEXPREOPT_BOOT_IMG_ONLY := false
-#  endif
-#endif
-#WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+ifeq ($(HOST_OS),linux)
+  ifeq ($(WITH_DEXPREOPT),)
+    WITH_DEXPREOPT := true
+    WITH_DEXPREOPT_BOOT_IMG_ONLY := false
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl , $(PRODUCT_COPY_FILES))
 
@@ -88,25 +88,23 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x1e00000
 TARGET_KERNEL_SOURCE := kernel/zte/draconis
 TARGET_KERNEL_CONFIG := draconis_defconfig
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin/"
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
 # Ant
 # or qualcomm-uart ?
-#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-#AUDIO_FEATURE_ENABLED_FM := true
+AUDIO_FEATURE_ENABLED_FM := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-#AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-#AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 
 # FM
-#TARGET_QCOM_NO_FM_FIRMWARE := true
+TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -158,7 +156,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5930598400
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
-#BOARD_USES_QC_TIME_SERVICES := true
+BOARD_USES_QC_TIME_SERVICES := true
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 
 # Recovery
@@ -202,7 +200,6 @@ WLAN_MODULES:
 
 TARGET_KERNEL_MODULES += WLAN_MODULES
 BOARD_USES_OPENSSL_SYMBOLS := true
-
 
 BLOCK_BASED_OTA=false
 WITH_GMS := true
