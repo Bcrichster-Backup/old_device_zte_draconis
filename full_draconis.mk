@@ -311,6 +311,7 @@ PRODUCT_COPY_FILES += \
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := draconis
+PRODUCT_NAME := full_draconis
 PRODUCT_BRAND := zte
 PRODUCT_MODEL := draconis
 PRODUCT_MANUFACTURER := zte
