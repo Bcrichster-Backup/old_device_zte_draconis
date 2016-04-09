@@ -1,8 +1,23 @@
 [
-
   {
-    "repository": "android_kernel_zte_draconis",
-    "target_path": "kernel/zte/draconis"
+    "repository": "dfuse06/android_kernel_zte_draconis",
+    "target_path": "kernel/zte/dracions",
+    "branch":      "m6.0.1"
   },
-
+   {
+    "repository":  "dfuse06/BrokenSwitcher",
+    "target_path": "packages/apps/BrokenSwitcher",
+    "branch":      "master"
+  },
+  {
+   "repository": "dfuse06/android_vendor_zte_draconis",
+   "target_path": "vendor/zte/draconis",
+   "branch": "cm-13.0"
+     },
+    {
+    "remote": "github",
+    "repository": "CyanogenMod/android_external_sony_boringssl-compat",
+    "target_path": "external/sony/boringssl-compat",
+    "branch": "cm-13.0"
+  }
 ]
