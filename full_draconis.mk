@@ -128,11 +128,6 @@ PRODUCT_PACKAGES += \
     regdbdump \
     regulatory.bin
 
-# BrokenSwitcher
-PRODUCT_PACKAGES += \
-    BrokenSwitcher
-
-
 # Wfd
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/capability.xml:system/etc/capability.xml \
