@@ -2,7 +2,7 @@
 
   {
     "repository": "dfuse06/android_kernel_zte_draconis",
-    "target_path": "kernel/zte/dracions",
+    "target_path": "kernel/zte/draconis",
     "branch":      "m6.0.1"
   },
    {
