@@ -8,7 +8,7 @@
    {
    "repository": "dfuse06/android_vendor_zte_draconis",
    "target_path": "vendor/zte/draconis",
-   "branch": "cm-13"
+   "branch": "cm13"
   },
    {
     "remote": "github",
