@@ -37,18 +37,16 @@
     <ctl name="DEC2 Volume" value="84" />
     <ctl name="DEC3 Volume" value="84" />
     <ctl name="DEC4 Volume" value="84" />
-    <ctl name="IIR1 INP1 Volume" value="58" />
-    <ctl name="IIR1 INP2 Volume" value="58" />
-    <ctl name="IIR1 INP3 Volume" value="58" />
-    <ctl name="IIR1 INP4 Volume" value="58" />
+    <ctl name="IIR1 INP1 Volume" value="84" />
+    <ctl name="IIR1 INP2 Volume" value="84" />
+    <ctl name="IIR1 INP3 Volume" value="84" />
+    <ctl name="IIR1 INP4 Volume" value="84" />
     <ctl name="COMP0 Switch" value="0" />
     <ctl name="COMP1 Switch" value="0" />
     <ctl name="COMP2 Switch" value="0" />
     <ctl name="SLIMBUS_3_RX Port Mixer MI2S_TX" value="0" />
     <ctl name="HDMI_RX Port Mixer MI2S_TX" value="0" />
     <ctl name="SLIMBUS_0_RX Port Mixer SLIM_0_TX" value="0" />
-    <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia2" value="0" />
-    <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3" value="0" />	
     <ctl name="AUX_PCM_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="AUX_PCM_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="0" />
@@ -208,7 +206,7 @@
     <ctl name="IIR1 Enable Band3" value="0" />
     <ctl name="IIR1 Enable Band4" value="0" />
     <ctl name="IIR1 Enable Band5" value="0" />
-    <ctl name="IIR1 INP1 Volume" value="58" />
+    <ctl name="IIR1 INP1 Volume" value="62" />
     <!-- IIR/voice anc end -->
     <!-- anc handset -->
     <ctl name="ANC Slot" value="0" />
@@ -669,16 +667,21 @@
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="SLIM TX1 MUX" value="DEC1" />
         <ctl name="DEC1 MUX" value="ADC1" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <ctl name="IIR1 INP1 MUX" value="ZERO" />
     </path>
-
+   <path name="aux-mic">
+        <ctl name="AIF1_CAP Mixer SLIM TX1" value="1"/>
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM TX1 MUX" value="DEC2" />
+        <ctl name="DEC2 MUX" value="ADC3" />
+        <ctl name="IIR1 INP1 MUX" value="ZERO" />
+    </path>
     <path name="adc2">
         <ctl name="AIF1_CAP Mixer SLIM TX1" value="1"/>
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="SLIM TX1 MUX" value="DEC1" />
         <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="ADC2 Volume" value="9" />
+        <ctl name="IIR1 INP1 MUX" value="ZERO" />
     </path>
 
     <path name="dmic1">
@@ -686,14 +689,14 @@
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="SLIM TX1 MUX" value="DEC1" />
         <ctl name="DEC1 MUX" value="DMIC1" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <ctl name="IIR1 INP1 MUX" value="ZERO" />
     </path>
 
     <path name="speaker">
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX3 MIX1 INP1" value="RX1" />
-        <ctl name="RX3 Digital Volume" value="68" />
+        <ctl name="RX3 Digital Volume" value="90" />
         <ctl name="RDAC5 MUX" value="DEM3_INV" />
         <ctl name="LINEOUT1 Volume" value="14" />
         <ctl name="LINEOUT2 Volume" value="14" />
@@ -743,14 +746,14 @@
 
     <path name="sidetone-headphones">
         <path name="sidetone-iir" />
-        <ctl name="IIR1 INP1 Volume" value="58" />
+        <ctl name="IIR1 INP1 Volume" value="68" />
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
         <ctl name="RX2 MIX2 INP1" value="IIR1" />
     </path>
 
     <path name="sidetone-handset">
         <path name="sidetone-iir" />
-        <ctl name="IIR1 INP1 Volume" value="58" />
+        <ctl name="IIR1 INP1 Volume" value="53" />
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
     </path>
 
@@ -764,7 +767,7 @@
     </path>
 
     <path name="speaker-mic">
-        <path name="adc1" />
+        <path name="aux-mic" />
     </path>
 
     <path name="handset">
@@ -821,13 +824,7 @@
         <path name="adc2" />
     </path>
 
-    <path name="aux-mic">
-        <ctl name="AIF1_CAP Mixer SLIM TX1" value="1"/>
-        <ctl name="SLIM_0_TX Channels" value="One" />
-        <ctl name="SLIM TX1 MUX" value="DEC2" />
-        <ctl name="DEC2 MUX" value="ADC3" />
-        <ctl name="IIR1 INP1 MUX" value="ZERO" />
-    </path>
+ 
 
     <path name="voice-handset">
         <path name="sidetone-handset" />
@@ -1050,7 +1047,7 @@
         <ctl name="SLIM TX3 MUX" value="DEC3" />
         <ctl name="DEC3 MUX" value="ADC4" />
         <ctl name="ADC4 Volume" value="11" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
+        <ctl name="IIR1 INP1 MUX" value="ZERO" />
     </path>
 
     <!-- Dual MIC devices -->
@@ -1062,9 +1059,7 @@
         <ctl name="SLIM TX2 MUX" value="DEC2" />
         <ctl name="DEC2 MUX" value="ADC3" />
         <ctl name="SLIM_0_TX Channels" value="Two" />
-        <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="ADC1 Volume" value="9" />
-        <ctl name="ADC3 Volume" value="9" />
+        <ctl name="IIR1 INP1 MUX" value="ZERO" />
     </path>
 
     <path name="dmic-endfire">
