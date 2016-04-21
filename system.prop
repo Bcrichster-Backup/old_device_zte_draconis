@@ -1,6 +1,6 @@
 # device
 ro.build.product=draconis
-ro.product.model=Zmax
+ro.product.model=Z970
 ro.product.device=draconis
 
 # ART
