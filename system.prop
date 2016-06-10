@@ -65,6 +65,7 @@ sys.io.scheduler=bfq
 # RIL
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
+ro.radio.networkmode=enable
 ro.telephony.default_network=10
 ro.ril.def.preffered.network=10
 telephony.lteOnCdmaDevice=1
@@ -102,9 +103,16 @@ ro.data.large_tcp_window_size=true
 mobiledata.interfaces=rmnet0,pdp0,wlan0,gprs,ppp0
 
 ro.telephony.call_ring.multiple=0
+persist.cust.tel.eons=1
+ro.ril.enable.amr.wideband=1
+ro.config.hw_fast_dormancy=1
 
 # Time services
 persist.timed.enable=true
 
 # Wifi
 wifi.interface=wlan0
+
+# Tweaks 
+ro.config.hw_quickpoweron=true
+debug.performance.tuning=1
