@@ -105,7 +105,6 @@ mobiledata.interfaces=rmnet0,pdp0,wlan0,gprs,ppp0
 ro.telephony.call_ring.multiple=0
 persist.cust.tel.eons=1
 ro.ril.enable.amr.wideband=1
-ro.config.hw_fast_dormancy=1
 
 # Time services
 persist.timed.enable=true
