@@ -11,6 +11,11 @@
    "branch": "cm13"
   },
    {
+   "repository": "dfuse06/arm-eabi-5.x-cortex-a7",
+   "target_path": "prebuilts/gcc/linux-x86/arm",
+   "branch": "master"
+  },
+   {
     "remote":       "github",
     "repository":   "CyanogenMod/android_external_stlport",
     "target_path":  "external/stlport",
