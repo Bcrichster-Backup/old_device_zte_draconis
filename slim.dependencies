@@ -1,0 +1,26 @@
+[
+
+  {
+    "repository": "relyt2012/android_kernel_zte_draconis",
+    "target_path": "kernel/zte/draconis",
+    "branch":      "cm13"
+  },
+   {
+   "repository": "relyt2012/android_vendor_zte_draconis",
+   "target_path": "vendor/zte/draconis",
+   "branch": "cm13"
+  },
+   {
+    "remote":       "github",
+    "repository":   "SlimRoms/android_external_stlport",
+    "target_path":  "external/stlport",
+    "branch":       "ng7.0"
+  },
+   {
+    "remote": "github",
+    "repository": "SlimRoms/android_external_sony_boringssl-compat",
+    "target_path": "external/sony/boringssl-compat",
+    "branch": "ng7.0"
+ },
+
+]
